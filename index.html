@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg">
+  <!-- TITTLE OF THE PAGE -->
+  <title>Ahmed Sabbah | Expenses chart component</title>
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <main>
+
+    <div class="header">
+      <div class="balance">
+        <p>My balance</p>
+        <h2>$921.48</h2>
+      </div>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="graph-body">
+        <h1>Spending - Last 7 days</h1>
+        <div class="graph">
+          <div class="mon stack">
+            <span class="col"></span>
+            <span class="desc">mon</span>
+          </div>
+          <div class="tue stack">
+            <span class="col"></span>
+            <span class="desc">tue</span>
+          </div>
+          <div class="wed stack">
+            <span class="active">$52.36</span>
+            <span class="col cyan"></span>
+            <span class="desc">wed</span>
+          </div>
+          <div class="thu stack">
+            <span class="active">$13.07</span>
+            <span class="col"></span>
+            <span class="desc">thu</span>
+          </div>
+          <div class="fri stack">
+            <span class="col"></span>
+            <span class="desc">fri</span>
+          </div>
+          <div class="sat stack">
+            <span class="col"></span>
+            <span class="desc">sat</span>
+          </div>
+          <div class="sun stack">
+            <span class="col"></span>
+            <span class="desc">sun</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="graph-footer">
+          <div class="total">
+            <p>Total this month</p>
+            <h2>$478.33</h2>
+          </div>
+          <div class="last">
+            <b>+2.4%</b>
+            <p>from last month</p>
+          </div>
+      </div>
+    </div>
+
+  </main>
+  
+</body>
+</html>

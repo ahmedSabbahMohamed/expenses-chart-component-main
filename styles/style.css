@@ -1,0 +1,187 @@
+:root {
+    --softred: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dbrown: hsl(25, 47%, 15%);
+    --mbrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --vporange: hsl(33, 100%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: DM Sans;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--cream);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.header,.graph-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--softred);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header .balance {
+    color: var(--vporange);
+}
+
+.balance p {
+    padding-bottom: .5rem;
+}
+
+.card {
+    background-color: var(--vporange);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.graph-body h1 {
+    font-size: 1.5rem;
+    color: var(--dbrown);
+}
+
+.graph {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--cream);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: .4rem;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.graph span.col {
+    display: inline-block;
+    width: 2rem;
+    background-color: var(--softred);
+    border-radius: .5rem;
+}
+
+.stack .desc {
+    color: var(--mbrown);
+}
+
+.mon .col {
+    height: 2.8rem;
+}
+
+.tue .col {
+    height: 5.6rem;
+}
+
+.wed .col {
+    background-color: var(--cyan) !important;
+    height: 9.5rem;
+}
+
+.thu .col {
+    height: 4.8rem;
+}
+
+.fri .col {
+    height: 3.8rem;
+}
+
+.sat .col {
+    height: 8rem;
+}
+
+.sun .col {
+    height: 4.2rem;
+}
+
+.graph-footer p {
+    color: var(--mbrown);
+}
+
+.total h2 {
+    color: var(--dbrown);
+    font-size: 2rem;
+}
+
+.last {
+    text-align: right;
+}
+
+.wed,.thu {
+    position: relative;
+}
+
+.active {
+    position: absolute;
+    top: -2.7rem;
+    background-color: var(--dbrown);
+    color: var(--vporange);
+    padding: .4rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+.wed .col:hover,.thu .col:hover {
+    opacity: .5;
+}
+
+.wed:hover .active {
+    display: block;
+    opacity: 1 !important;
+}
+
+.thu:hover .active {
+    display: block;
+    opacity: 1 !important;
+}
+
+b {
+    color: var(--dbrown);
+}
+
+@media (min-width: 500px) {
+    .graph {
+        gap: 1rem;
+    }
+
+    .total h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width: 550px) {
+    .graph span.col {
+        width: 2.8rem;
+    }
+}
