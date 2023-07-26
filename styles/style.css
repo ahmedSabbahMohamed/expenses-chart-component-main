@@ -42,7 +42,7 @@ main {
 .header {
     background-color: var(--softred);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1.3rem;
     margin-bottom: 1rem;
 }
 
@@ -57,131 +57,133 @@ main {
 .card {
     background-color: var(--vporange);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1.3rem;
 }
 
 .graph-body h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--dbrown);
 }
 
 .graph {
     padding-top: 4rem;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
     border-bottom: 1px solid var(--cream);
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
-    gap: .4rem;
+    justify-content: space-between;
+    gap: .1rem;
 }
 
-.stack {
+.graph .col {
     display: flex;
     flex-direction: column;
-    gap: .4rem;
     align-items: center;
-    cursor: pointer;
+    gap: .3rem;
+    position: relative;
 }
 
-.graph span.col {
+.graph .col span {
     display: inline-block;
+}
+
+.graph .col span:nth-child(2) {
     width: 2rem;
     background-color: var(--softred);
     border-radius: .5rem;
 }
 
-.stack .desc {
-    color: var(--mbrown);
+.graph .col .mon {
+    height: 3.2rem;
 }
 
-.mon .col {
-    height: 2.8rem;
+.graph .col .tue {
+    height: 6.6rem;
 }
 
-.tue .col {
-    height: 5.6rem;
-}
-
-.wed .col {
+.graph .col .wed {
     background-color: var(--cyan) !important;
-    height: 9.5rem;
+    height: 11rem;
 }
 
-.thu .col {
-    height: 4.8rem;
+.graph .col .thu {
+    height: 5.4rem;
 }
 
-.fri .col {
+.graph .col .fri {
     height: 3.8rem;
 }
 
-.sat .col {
-    height: 8rem;
+.graph .col .sat {
+    height: 8.7rem;
 }
 
-.sun .col {
-    height: 4.2rem;
+.graph .col .sun {
+    height: 5rem;
+}
+
+.graph .col .mon:hover,
+.graph .col .tue:hover,
+.graph .col .wed:hover,
+.graph .col .thu:hover,
+.graph .col .fri:hover,
+.graph .col .sat:hover,
+.graph .col .sun:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.graph .col span:nth-child(3) {
+    color: var(--mbrown);
+}
+
+.active {
+    background-color: var(--dbrown);
+    color: var(--vporange);
+    border-radius: .5rem;
+    padding: .5rem;
+    position: absolute;
+    z-index: 1;
+    top: -2.5rem;
+    opacity: 0;
+}
+
+.graph-footer {
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+
+.graph-footer h2 {
+    font-size: 2rem;
 }
 
 .graph-footer p {
     color: var(--mbrown);
 }
 
-.total h2 {
-    color: var(--dbrown);
-    font-size: 2rem;
-}
-
 .last {
     text-align: right;
-}
-
-.wed,.thu {
-    position: relative;
-}
-
-.active {
-    position: absolute;
-    top: -2.7rem;
-    background-color: var(--dbrown);
-    color: var(--vporange);
-    padding: .4rem;
-    border-radius: .5rem;
-    display: none;
-}
-
-.wed .col:hover,.thu .col:hover {
-    opacity: .5;
-}
-
-.wed:hover .active {
-    display: block;
-    opacity: 1 !important;
-}
-
-.thu:hover .active {
-    display: block;
-    opacity: 1 !important;
 }
 
 b {
     color: var(--dbrown);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
+    .graph-body h1 {
+        font-size: 2rem;
+    }
+
+    .graph .col span:nth-child(2) {
+        width: 3rem;
+    }
+
     .graph {
-        gap: 1rem;
+        gap: .8rem;
     }
 
-    .total h2 {
-        font-size: 2.5rem;
+    .graph-footer h2 {
+        font-size: 2.3rem;
     }
 
-}
-
-@media (min-width: 550px) {
-    .graph span.col {
-        width: 2.8rem;
-    }
 }
