@@ -137,6 +137,7 @@ main {
 .graph .col .sun:hover {
     opacity: .5;
     cursor: pointer;
+    transition: 0s;
 }
 
 .graph .col span:nth-child(3) {
@@ -152,6 +153,7 @@ main {
     z-index: 1;
     top: -2.5rem;
     opacity: 0;
+    transition: all .3s ease-in-out;
 }
 
 .graph-footer {
