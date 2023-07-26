@@ -10,15 +10,16 @@ window.onload = function () {
             col.addEventListener("mouseleave", _ => {
                 col.previousElementSibling.style.opacity = 0
             })
+            col.classList.remove("test")
         })
-    }, 50);
+    }, 300);
 }
 
 fetch("./data.json")
     .then(response => response.json())
     .then(data => graph.innerHTML = data.map(ele => `<div class="col">
     <span class="active">$${ele.amount}</span>
-    <span class="${ele.day}"></span>
+    <span class="${ele.day} test"></span>
     <span>${ele.day}</span>
   </div>`).join(' '))
 

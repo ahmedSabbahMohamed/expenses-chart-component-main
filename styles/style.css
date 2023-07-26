@@ -91,6 +91,12 @@ main {
     width: 2rem;
     background-color: var(--softred);
     border-radius: .5rem;
+    transition: all 1.5s ease-in-out;
+    transition-delay: .2s;
+}
+
+.test {
+    height: .1rem !important;
 }
 
 .graph .col .mon {
